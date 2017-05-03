@@ -1,0 +1,140 @@
+drop   database if exists carrace;
+create database carrace;
+use carrace;
+
+CREATE TABLE `accounts` (`UserName` varchar(20) DEFAULT NULL,`Password` varchar(25) DEFAULT NULL,`Profits` int(11) NOT NULL);
+
+INSERT INTO `accounts` (`UserName`, `Password`, `Profits`) VALUES ('ophir', '1234', -1684);
+INSERT INTO `accounts` (`UserName`, `Password`, `Profits`) VALUES('ran', '123', -775);
+INSERT INTO `accounts` (`UserName`, `Password`, `Profits`) VALUES('1', '1', 0);
+INSERT INTO `accounts` (`UserName`, `Password`, `Profits`) VALUES('ran2', '123', 0);
+INSERT INTO `accounts` (`UserName`, `Password`, `Profits`) VALUES('iphone', '1234', -5422);
+
+
+CREATE TABLE `cars` ( `Man` text,`Type` text,`Color` text,`Num` int(11) NOT NULL);
+
+
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Honda', 'Sport', 'BLUE', 0);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Ford', 'Sport', 'Green', 1);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Toyota', 'Truck', 'Yellow', 2);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Mazda', 'Drug', 'Orange', 3);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Hyundai', 'Truck', 'VIOLET', 4);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Honda', 'Truck', 'PINK', 5);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Hyundai', 'Truck', 'WHITE', 6);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Nissan', 'Drug', 'AQUA', 7);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Sosita', 'Sport', 'RED', 8);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Porshe', 'Sport', 'Green', 9);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Bugatti', 'Sport', 'Pink', 10);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Peugeot', 'Drug', 'Red', 11);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('BMW', 'Drug', 'Green', 12);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Ferrari', 'Drug', 'Blue', 13);
+INSERT INTO `cars` (`Man`, `Type`, `Color`, `Num`) VALUES ('Isuzu', 'Truck', 'RED', 14);
+
+
+CREATE TABLE `gambles` ( `gamblerName` text NOT NULL,`raceID` text NOT NULL, `carGambeldOn` text NOT NULL,`amount` int(11) NOT NULL,  `profit` int(11) NOT NULL);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '7', 'BLUE Honda 0', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '7', 'BLUE Honda 0', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '7', 'Green Ford 1', 400, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '7', 'VIOLET Hyundai 4', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '8', 'PINK Honda 5', 600, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '8', 'WHITE Hyundai 6', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '8', 'AQUA Nissan 7', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '9', 'PINK Honda 5', 100, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '9', 'WHITE Hyundai 6', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '9', 'AQUA Nissan 7', 12345, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '9', 'RED Sosita 8', 9000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '9', 'Aqua Porshe 9', 10000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '9', 'Aqua Porshe 9', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'PINK Honda', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'WHITE Hyundai', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'AQUA Nissan', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '10', 'RED Sosita', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '10', 'Aqua Porshe', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Pink Bugatti ', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Red Peugeot ', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Green BMW ', 400, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '10', 'Blue Ferrari ', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '10', 'Blue Isuzu ', 400, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Pink Bugatti ', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Red Peugeot ', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '10', 'Green BMW ', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '10', 'Blue Ferrari ', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Blue Isuzu ', 850, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Pink Bugatti', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Red Peugeot', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Green BMW', 2000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '10', 'Blue Ferrari', 900, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '10', 'Blue Isuzu', 2500, 6935);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'PINK Hond', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '10', 'WHITE Hyunda', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '10', 'AQUA Nissa', 500, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'RED Sosit', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Aqua Porsh', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Pink Bugatti 10', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '10', 'Red Peugeot 11', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Green BMW 12', 500, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '10', 'Blue Ferrari 13', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '10', 'Blue Isuzu 14', 800, 2565);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '11', 'BLUE Honda 0', 200, 5130);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '11', 'Green Ford 1', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '11', 'Yellow Toyota 2', 2000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '11', 'Orange Mazda 3', 2000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '11', 'VIOLET Hyundai 4', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '12', 'PINK Honda 5', 100, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '12', 'WHITE Hyundai 6', 2000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '12', 'AQUA Nissan 7', 20000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '12', 'RED Sosita 8', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '12', 'Aqua Porshe 9', 100, 22040);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '13', 'Pink Bugatti 10', 200, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '13', 'Red Peugeot 11', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '13', 'Green BMW 12', 2000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '13', 'Green BMW 12', 2000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '13', 'Blue Ferrari 13', 2000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '13', 'Blue Isuzu 14', 100, 6935);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '14', 'PINK Honda 5', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '14', 'WHITE Hyundai 6', 2000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '14', 'AQUA Nissan 7', 100, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '14', 'RED Sosita 8', 100, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '14', 'Aqua Porshe 9', 100, 3135);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '15', 'Green Ford 1', 100, 2185);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '15', 'Yellow Toyota 2', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '15', 'BLUE Honda 0', 100, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '15', 'VIOLET Hyundai 4', 100, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '15', 'Orange Mazda 3', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '16', 'Pink Bugatti 10', 100, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ran', '16', 'Red Peugeot 11', 100, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('ophir', '16', 'Green BMW 12', 1000, 0);
+INSERT INTO `gambles` (`gamblerName`, `raceID`, `carGambeldOn`, `amount`, `profit`) VALUES ('iphone', '16', 'Blue Ferrari 13', 1000, 0);
+
+
+
+CREATE TABLE `races` (`RaceNum` int(11) NOT NULL,`Car` text NOT NULL,`Color` text NOT NULL,`CarNum` int(11) NOT NULL, `NumBets` int(11) DEFAULT NULL,`TotalBets` int(11) DEFAULT NULL);
+
+
+CREATE TABLE `raceshistory` (`ID` int(11) NOT NULL,`DateAndTime` text NOT NULL, `Cars` text NOT NULL,`Players` text NOT NULL, `Winner` text NOT NULL,`TotalBets` int(11) NOT NULL, `systemProfits` int(11) NOT NULL);
+
+
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (0, '2017.03.19.12.54.20', 'BLUE Honda, Green Ford, Yellow Toyota, Orange Mazda, VIOLET Hyundai', '[ran, ophir, ran]', 'BLUE Honda', 25347, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (1, '2017.03.19.13.25.44', 'PINK Honda, WHITE Hyundai, AQUA Nissan, RED Sosita, Aqua Porshe', 'r', 'Aqua Porshe', 2745, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (2, '2017.03.19.13.30.15', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', 'r', 'Blue Isuzu', 600, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (3, '2017.03.19.13.32.17', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ran, ophir]', 'Blue Isuzu', 600, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (4, '2017.03.19.16.07.20', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ophir, iphone]', 'Blue Isuzu', 800, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (5, '2017.03.19.16.11.25', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ophir, iphone]', 'Blue Isuzu', 2432, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (6, '2017.03.19.16.14.24', 'PINK Honda, WHITE Hyundai, AQUA Nissan, RED Sosita, Aqua Porshe', '[ran, iphone, ophir]', 'Aqua Porshe', 1500, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (7, '2017.03.19.16.16.31', 'BLUE Honda, Green Ford, Yellow Toyota, Orange Mazda, VIOLET Hyundai', '[ran, iphone, ophir]', 'BLUE Honda', 1500, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (8, '2017.03.19.16.18.06', 'PINK Honda, WHITE Hyundai, AQUA Nissan, RED Sosita, Aqua Porshe', '[ran, ophir, iphone]', 'Aqua Porshe', 2400, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (9, '2017.03.19.16.21.34', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ran, ophir, iphone, ran, ran]', 'Blue Isuzu', 33345, 0);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (14, '2017.03.20.11.45.45', 'PINK Honda, WHITE Hyundai, AQUA Nissan, RED Sosita, Aqua Porshe', '[ran, ophir, iphone, ran, ran]', 'Aqua Porshe', 3300, 165);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (15, '2017.03.20.11.52.57', 'BLUE Honda, Green Ford, Yellow Toyota, Orange Mazda, VIOLET Hyundai', '[ophir, ophir, ran, ran, iphone]', 'Green Ford', 2300, 115);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (16, '2017.03.20.11.58.22', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ran, ophir, iphone, ophir]', 'Blue Isuzu', 2235, 111);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (17, '2017.03.20.12.02.49', 'BLUE Honda, Green Ford, Yellow Toyota, Orange Mazda, VIOLET Hyundai', '[ran, ran, ophir, iphone, ophir]', 'VIOLET Hyundai', 1472, 73);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (18, '2017.03.20.12.32.57', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ran, ran, ran, ran, ophir, ophir, ophir, ophir]', 'Blue Isuzu', 700, 35);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (19, '2017.03.20.12.54.14', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ran, ran, ran, ran, ophir, ophir, ophir, ophir, ophir]', 'Blue Isuzu', 750, 37);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (20, '2017.03.20.13.18.20', 'BLUE Honda, Green Ford, Yellow Toyota, Orange Mazda, VIOLET Hyundai', '[ran, ran, ran, ran, ran, ophir, ophir, ophir, ophir, ophir]', 'VIOLET Hyundai', 750, 37);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (21, '2017.03.20.13.27.17', 'BLUE Honda, Green Ford, Yellow Toyota, Orange Mazda, VIOLET Hyundai', '[ran, ran, ran, ran, ran, ophir, ophir, ophir, ophir, ophir]', 'Green Ford', 750, 37);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (22, '2017.03.20.13.36.07', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ran, ran, ran, ran, ophir, ophir, ophir, ophir, ophir]', 'Blue Isuzu', 750, 37);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (23, '2017.03.20.13.52.58', 'PINK Honda, WHITE Hyundai, AQUA Nissan, RED Sosita, Aqua Porshe', '[ran, ran, ran, ran, ran, ophir, ophir, ophir, ophir, ophir]', 'Aqua Porshe', 750, 37);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (24, '2017.03.20.14.10.38', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ran, ran, ran, ran, ophir, ophir, ophir, ophir, ophir]', 'Blue Isuzu', 750, 37);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (25, '2017.03.20.14.16.30', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ophir, iphone, ran, ran]', 'Blue Ferrari', 1500, 75);
+INSERT INTO `raceshistory` (`ID`, `DateAndTime`, `Cars`, `Players`, `Winner`, `TotalBets`, `systemProfits`) VALUES (26, '2017.03.20.15.26.40', 'Pink Bugatti, Red Peugeot, Green BMW, Blue Ferrari, Blue Isuzu', '[ran, ophir, ran]', 'Blue Isuzu', 500, 25);
+
